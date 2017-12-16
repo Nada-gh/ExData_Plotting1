@@ -1,4 +1,5 @@
 plot4<- function(){
+ 
   ## Reading data from .txt file
   dta<-fread("household_power_consumption.txt",sep=";",na.strings = "?",header = TRUE)
   
@@ -20,7 +21,7 @@ plot4<- function(){
   
   #first Plot
   plot(ndta$timestmp,ndta$Global_active_power,type = "l",xlab = "",ylab = "Global Active Power")  
-
+  
   
   #Second Plot
   plot(ndta$timestmp,ndta$Voltage,type="l",xlab="datetime", ylab="Voltage")
@@ -35,8 +36,10 @@ plot4<- function(){
   
   #Forth Plot 
   plot(ndta$timestmp,ndta$Global_reactive_power,type ="l",xlab = "datetime", ylab = "Global_reactive_power")
- 
+  
   
   ## Colse the PNG file
   dev.off()
+  
+  
 }
