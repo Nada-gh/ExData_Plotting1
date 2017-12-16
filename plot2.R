@@ -1,4 +1,5 @@
 plot2<-function(){
+  
   ## Reading data from .txt file
   dta<-fread("household_power_consumption.txt",sep=";",na.strings = "?",header = TRUE)
   
@@ -22,4 +23,5 @@ plot2<-function(){
   
   ## Colse the PNG file
   dev.off()
+  
 }
